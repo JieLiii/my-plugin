@@ -4,5 +4,5 @@ out
 *.ipr
 target
 vcs.xml
-workspace.xml
+workspace.*
 
