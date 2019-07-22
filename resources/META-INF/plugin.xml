@@ -39,6 +39,11 @@
     </group>
     <action id="DemoPlugin" class="actions.DemoPlugin" text="DemoPlugin" description="Test plugin">
       <add-to-group group-id="DemoMenu" anchor="first"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt K"/>
+    </action>
+    <action id="TestPlugin" class="actions.TestPlugin" text="TestPlugin" description="Test plugin">
+      <add-to-group group-id="DemoMenu" anchor="last"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt T"/>
     </action>
   </actions>
 

@@ -9,9 +9,9 @@ IDEA插件开发
 ## 1. Components 类型
 component类型 | 描述 | 需要实现的接口 | plugin.xml配置元素 | 对象获取方式
 ---|---|---|---|---
-Application Component | 在IDEA启动时初始化，在IntelliJ IDEA程序中只有一个实例存在 | ApplicationComponent | <application-components> | Application实例的getComponent(Class)
-Project Component | IDEA会为每一个Project实例创建project级别的Component | ProjectComponent | <project-components> | Project实例的getComponent(Class)
-Module Component | IDEA会为已加载的Project中的每一个Module创建module级别的Component | ModuleComponent | <module-components> | Module实例的getComponent(Class)
+Application Component | 在IDEA启动时初始化，在IntelliJ IDEA程序中只有一个实例存在 | ApplicationComponent | &#60;application-components&#62; | Application实例的getComponent(Class)
+Project Component | IDEA会为每一个Project实例创建project级别的Component | ProjectComponent | &#60;project-components&#62; | Project实例的getComponent(Class)
+Module Component | IDEA会为已加载的Project中的每一个Module创建module级别的Component | ModuleComponent | &#60;module-components&#62; | Module实例的getComponent(Class)
 
 ## 2. 注册 Components
 components 需要配置在 plugin.xml 中，并指定 interface 和 implementation，interface 类用于从其他组件中检索组件，implementation 类用于实例化组件。

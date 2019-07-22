@@ -1,8 +1,10 @@
 ### IntelliJ IDEA ###
+markdown-navigator
 out
 *.iws
 *.ipr
 target
 vcs.xml
+misc.xml
 workspace.*
-
+markdown-navigator.*
