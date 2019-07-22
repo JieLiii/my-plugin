@@ -1,0 +1,46 @@
+<idea-plugin>
+  <id>com.jackinjava.idea.plugin.autocrud</id>
+  <name>AutoCrud</name>
+  <version>1.0</version>
+  <vendor email="1278708252@qq.com">JACK IN JAVA</vendor>
+
+  <description><![CDATA[
+      学习IDEA插件开发<br>
+      https://cloud.tencent.com/developer/article/1348741
+    ]]></description>
+
+  <!-- 插件版本变更信息，支持HTML标签；
+         将展示在 settings | Plugins 对话框和插件仓库的Web页面 -->
+  <change-notes>插件版本变更信息，支持HTML标签；Initial release of the plugin.</change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+  <depends>com.intellij.modules.platform</depends>
+
+  <application-components>
+    <component>
+      <!-- 组件接口 -->
+      <interface-class>service.DemoPluginRegistration</interface-class>
+      <!-- 组件的实现类 -->
+      <implementation-class>service.impl.DemoPluginRegistrationImpl</implementation-class>
+    </component>
+  </application-components>
+
+  <actions>
+    <!-- Add your actions here -->
+    <group id="DemoMenu" text="测试菜单">
+      <add-to-group group-id="MainMenu" anchor="last" />
+    </group>
+    <action id="DemoPlugin" class="actions.DemoPlugin" text="DemoPlugin" description="Test plugin">
+      <add-to-group group-id="DemoMenu" anchor="first"/>
+    </action>
+  </actions>
+
+
+</idea-plugin>
